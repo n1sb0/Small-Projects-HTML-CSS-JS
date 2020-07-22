@@ -1,0 +1,96 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: monospace, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+body{
+    background-image: url("../IMG/mountain2.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.clock{
+    width: 500px;
+    height: 500px;
+    background-color: #14141493;
+    border: 3px solid #19191a21;
+    border-radius: 50%;
+    position: relative;
+}
+
+.clock .number{
+    --rotation: 0deg;
+    font-size: 2rem;
+    color: #f8c291;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.clock .number1{ --rotation: 30deg; }
+.clock .number2{ --rotation: 60deg; }
+.clock .number3{ --rotation: 90deg; }
+.clock .number4{ --rotation: 120deg; }
+.clock .number5{ --rotation: 150deg; }
+.clock .number6{ --rotation: 180deg; }
+.clock .number7{ --rotation: 210deg; }
+.clock .number8{ --rotation: 240deg; }
+.clock .number9{ --rotation: 270deg; }
+.clock .number10{ --rotation: 300deg; }
+.clock .number11{ --rotation: 330deg; }
+
+.clock .hand{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: black;
+    border: 1px solid #ffffff41;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after{
+    content: "";
+    position: absolute;
+    background-color: #333;
+    z-index: 11;
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+}
+
+.clock .hand.second{
+    width: 3px;
+    height: 40%;
+    background-color: #e55039;
+}
+
+.clock .hand.minute{
+    width: 6px;
+    height: 35%;
+    background-color: #333;
+}
+
+.clock .hand.hour{
+    width: 9px;
+    height: 37%;
+    background-color: #333;
+}
+
+

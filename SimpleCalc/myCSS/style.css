@@ -1,0 +1,72 @@
+html{
+    background-image: url("../Img/mountain2.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: Trebuchet MS, sans-serif;
+    overflow: hidden;
+}
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px,auto) repeat(5, 100px);
+}
+
+.calculator-grid > button{
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ecf0f17a;
+    background: #222f3eb7;
+    color: #ecf0f1;
+    font-size: 2rem;
+    outline: none;
+}
+
+.calculator-grid > button:hover{
+    background: rgba(51, 51, 51, 0.904);
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(51, 51, 51, 0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand{
+    color: #ecf0f1;
+    font-size: 1.5rem;
+}
+
+.output .current-operand{
+    color: #ecf0f1;
+    font-size: 2.5rem;
+}
+
